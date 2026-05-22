@@ -1,0 +1,47 @@
+{
+  "landing": {
+    "hero_title": "どこでもDockerを管理。",
+    "hero_subtitle": "絶対的な制御のために設計された、軽量で高パフォーマンスな自己ホスティング型コンテナオーケストレーションパネル。",
+    "features_heading": "コアシステム機能",
+    "feature_speed_title": "超高速インターフェース",
+    "feature_speed_desc": "即時インタラクションのためにReactで構築。",
+    "feature_security_title": "厳格なRBACパイプライン",
+    "feature_security_desc": "安全なJWT統合により強制される詳細なアクセス制限。",
+    "feature_hosting_title": "独立したホスティング",
+    "feature_hosting_desc": "完全なデータ主権。独自のインフラストラクチャにデプロイします。",
+    "pricing_cta": "透明なオープンソースを確認する",
+    "start_cta": "デプロイメントを初期化",
+    "footer_copyright": "© 2026 Docker Panel Core. エンタープライズグレードのオープンソース。"
+  },
+  "auth": {
+    "login_heading": "パネルへの認証",
+    "register_heading": "新しいIDのプロビジョニング",
+    "email_label": "管理用メールアドレス",
+    "email_placeholder": "admin@your-infrastructure.com",
+    "password_label": "安全なパスワード",
+    "password_placeholder": "••••••••••••",
+    "password_confirm_label": "安全なパスワードの確認",
+    "submit_login": "システムにアクセス",
+    "submit_register": "IDを初期化",
+    "error_password_validation": "パスワードポリシーの適用: 特殊記号を含む8文字以上である必要があります。",
+    "error_password_mismatch": "認証失敗: パスワードが一致しません。",
+    "error_email_validation": "無効なメール構造が検出されました。",
+    "error_auth_failed": "認証が拒否されました。資格情報が永続的なレコードと一致しません。"
+  },
+  "dashboard": {
+    "overview_title": "システムテレメトリとメトリクス",
+    "active_containers": "アクティブなコンテナノード",
+    "trigger_s3_backup": "S3データスナップショットをトリガー",
+    "view_system_logs": "デーモンログの検査",
+    "restart_container": "コンテナの強制再起動",
+    "restart_success_msg": "コンテナの再起動が正常にオーケストレーションされました。",
+    "error_access_denied": "403 Forbidden: このリソースをオーケストレーションするための権限レイヤーが不足しています。",
+    "error_connection": "Dockerデーモンとのソケット接続を確立できませんでした。",
+    "logs_title": "コンテナ実行ログ",
+    "close_action": "インターフェースを閉じる",
+    "state_running": "実行中",
+    "state_exited": "終了",
+    "backup_success": "S3スナップショットが完了しました。",
+    "no_containers": "アクティブなノードは検出されませんでした。"
+  }
+}

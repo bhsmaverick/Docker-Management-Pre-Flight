@@ -1,0 +1,47 @@
+{
+  "landing": {
+    "hero_title": "Zarządzaj Dockerem Gdziekolwiek.",
+    "hero_subtitle": "Lekki, wysoce wydajny, samodzielnie hostowany panel orkiestracji kontenerów, zaprojektowany z myślą o absolutnej kontroli.",
+    "features_heading": "Główne Możliwości Systemu",
+    "feature_speed_title": "Błyskawiczny Interfejs",
+    "feature_speed_desc": "Zbudowany z użyciem React dla natychmiastowych interakcji.",
+    "feature_security_title": "Ścisły Rurociąg RBAC",
+    "feature_security_desc": "Granularne limity rzutowane poprzez bezpieczną integrację JWT.",
+    "feature_hosting_title": "Niezależny Hosting",
+    "feature_hosting_desc": "Pełna suwerenność danych. Wdróż we własnej infrastrukturze.",
+    "pricing_cta": "Przeglądaj Przejrzysty Open Source",
+    "start_cta": "Zainicjuj Wdrożenie",
+    "footer_copyright": "© 2026 Docker Panel Core. Sieć typu enterprise, open source."
+  },
+  "auth": {
+    "login_heading": "Uwierzytelnij Się w Panelu",
+    "register_heading": "Zbuduj Nową Tożsamość",
+    "email_label": "Administracyjny Adres E-mail",
+    "email_placeholder": "admin@twoja-infrastruktura.com",
+    "password_label": "Bezpieczne Hasło",
+    "password_placeholder": "••••••••••••",
+    "password_confirm_label": "Potwierdź Bezpieczne Hasło",
+    "submit_login": "Dostęp do Systemu",
+    "submit_register": "Zainicjuj Tożsamość",
+    "error_password_validation": "Wymuszona polityka haseł: Hasło musi posiadać co najmniej 8 znaków i chociaż 1 znak specjalny.",
+    "error_password_mismatch": "Autoryzacja nie powiodła się: Hasła nie są takie same.",
+    "error_email_validation": "Wykryto nieprawidłowy format adresu e-mail.",
+    "error_auth_failed": "Uwierzytelnianie odrzucone. Poświadczenia nie pasują do trwałych rekordów."
+  },
+  "dashboard": {
+    "overview_title": "Telemetria i Metryki Systemu",
+    "active_containers": "Aktywne Węzły Kontenerów",
+    "trigger_s3_backup": "Uruchom Snapshot Danych S3",
+    "view_system_logs": "Zbadaj Logi Daemona",
+    "restart_container": "Wymuś Restart Kontenera",
+    "restart_success_msg": "Restart kontenera został zorkiestrowany pomyślnie.",
+    "error_access_denied": "403 Zabronione: Posiadasz niewystarczające warstwy uprawnień do orkiestracji tego zasobu.",
+    "error_connection": "Nie udało się nawiązać połączenia socketowego z daemonem Docker.",
+    "logs_title": "Logi Egzekucji Kontenera",
+    "close_action": "Zamknij Interfejs",
+    "state_running": "Uruchomiony",
+    "state_exited": "Zatrzymany",
+    "backup_success": "Snapshot S3 zakończony.",
+    "no_containers": "Nie wykryto aktywnych węzłów."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "landing": {
+    "hero_title": "Kelola Docker di Mana Saja.",
+    "hero_subtitle": "Panel orkestrasi wadah mandiri yang ringan dan berkinerja tinggi, dirancang untuk kontrol absolut.",
+    "features_heading": "Kemampuan Sistem Inti",
+    "feature_speed_title": "Antarmuka Ultrasonik",
+    "feature_speed_desc": "Dibangun dengan React untuk interaksi instan.",
+    "feature_security_title": "Jalur RBAC Ketat",
+    "feature_security_desc": "Batas akses terperinci yang diberlakukan melalui integrasi JWT yang aman.",
+    "feature_hosting_title": "Hosting Mandiri",
+    "feature_hosting_desc": "Kedaulatan data penuh. Terapkan di infrastruktur Anda sendiri.",
+    "pricing_cta": "Tinjau Open Source Transparan",
+    "start_cta": "Inisialisasi Penerapan",
+    "footer_copyright": "© 2026 Docker Panel Core. Sumber terbuka tingkat perusahaan."
+  },
+  "auth": {
+    "login_heading": "Otentikasi ke Panel",
+    "register_heading": "Sediakan Identitas Baru",
+    "email_label": "Alamat Email Administratif",
+    "email_placeholder": "admin@infrastruktur-anda.com",
+    "password_label": "Kata Sandi Aman",
+    "password_placeholder": "••••••••••••",
+    "password_confirm_label": "Konfirmasi Kata Sandi Aman",
+    "submit_login": "Akses Sistem",
+    "submit_register": "Inisialisasi Identitas",
+    "error_password_validation": "Kebijakan kata sandi diberlakukan: Harus terdiri dari 8+ karakter termasuk simbol khusus.",
+    "error_password_mismatch": "Otentikasi gagal: Kata sandi tidak cocok.",
+    "error_email_validation": "Struktur email tidak valid terdeteksi.",
+    "error_auth_failed": "Otentikasi ditolak. Kredensial tidak cocok dengan catatan yang ada."
+  },
+  "dashboard": {
+    "overview_title": "Telemetri dan Metrik Sistem",
+    "active_containers": "Node Wadah Aktif",
+    "trigger_s3_backup": "Picu Snapshot Data S3",
+    "view_system_logs": "Periksa Log Daemon",
+    "restart_container": "Paksa Mulai Ulang Wadah",
+    "restart_success_msg": "Mulai ulang wadah berhasil diatur.",
+    "error_access_denied": "403 Terlarang: Anda memiliki lapisan hak istimewa yang tidak memadai untuk mengatur sumber daya ini.",
+    "error_connection": "Gagal membuat koneksi soket dengan daemon Docker.",
+    "logs_title": "Log Eksekusi Wadah",
+    "close_action": "Tutup Antarmuka",
+    "state_running": "Berjalan",
+    "state_exited": "Keluar",
+    "backup_success": "Snapshot S3 selesai.",
+    "no_containers": "Tidak ada node aktif yang terdeteksi."
+  }
+}

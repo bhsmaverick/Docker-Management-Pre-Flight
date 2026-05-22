@@ -1,0 +1,47 @@
+{
+  "landing": {
+    "hero_title": "Docker Überall Verwalten.",
+    "hero_subtitle": "Das schlanke, hochperformante, selbstgehostete Container-Orchestrierungs-Panel für absolute Kontrolle.",
+    "features_heading": "Kernsystemfunktionen",
+    "feature_speed_title": "Blitzschnelle Schnittstelle",
+    "feature_speed_desc": "Entwickelt mit React für sofortige Interaktion.",
+    "feature_security_title": "Strenge RBAC-Pipeline",
+    "feature_security_desc": "Granulare Zugriffsgrenzen, die durch sichere JWT-Integration erzwungen werden.",
+    "feature_hosting_title": "Unabhängiges Hosting",
+    "feature_hosting_desc": "Vollständige Datensouveränität. Bereitstellung auf eigener Infrastruktur.",
+    "pricing_cta": "Transparentes Open Source prüfen",
+    "start_cta": "Bereitstellung initialisieren",
+    "footer_copyright": "© 2026 Docker Panel Core. Enterprise-Grade Open Source."
+  },
+  "auth": {
+    "login_heading": "Am Panel authentifizieren",
+    "register_heading": "Neue Identität bereitstellen",
+    "email_label": "Administrative E-Mail-Adresse",
+    "email_placeholder": "admin@ihre-infrastruktur.com",
+    "password_label": "Sicheres Passwort",
+    "password_placeholder": "••••••••••••",
+    "password_confirm_label": "Sicheres Passwort bestätigen",
+    "submit_login": "Systemzugang",
+    "submit_register": "Identität initialisieren",
+    "error_password_validation": "Passwortrichtlinie erzwungen: Mindestens 8 Zeichen einschließlich eines Sonderzeichens.",
+    "error_password_mismatch": "Authentifizierung fehlgeschlagen: Passwörter stimmen nicht überein.",
+    "error_email_validation": "Ungültige E-Mail-Struktur erkannt.",
+    "error_auth_failed": "Authentifizierung abgelehnt. Anmeldeinformationen stimmen nicht mit dauerhaften Datensätzen überein."
+  },
+  "dashboard": {
+    "overview_title": "Systemtelemetrie & Metriken",
+    "active_containers": "Aktive Container-Knoten",
+    "trigger_s3_backup": "S3 Data Snapshot auslösen",
+    "view_system_logs": "Daemon-Protokolle prüfen",
+    "restart_container": "Container-Neustart erzwingen",
+    "restart_success_msg": "Container-Neustart erfolgreich orchestriert.",
+    "error_access_denied": "403 Verboten: Unzureichende Berechtigungsschichten, um diese Ressource zu orchestrieren.",
+    "error_connection": "Fehler beim Herstellen der Socket-Verbindung zum Docker-Daemon.",
+    "logs_title": "Container-Ausführungsprotokolle",
+    "close_action": "Schnittstelle schließen",
+    "state_running": "Läuft",
+    "state_exited": "Beendet",
+    "backup_success": "S3 Snapshot abgeschlossen.",
+    "no_containers": "Keine aktiven Knoten erkannt."
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Docker Management Pre-Flight",
+  "description": "Go Backend Foundation & Vue 3 i18n Architecture",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

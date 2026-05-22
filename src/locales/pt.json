@@ -1,0 +1,47 @@
+{
+  "landing": {
+    "hero_title": "Gerencie o Docker em Qualquer Lugar.",
+    "hero_subtitle": "O painel de orquestração de contêineres leve e de alto desempenho, auto-hospedado e projetado para controle absoluto.",
+    "features_heading": "Capacidades Principais do Sistema",
+    "feature_speed_title": "Interface Ultrarrápida",
+    "feature_speed_desc": "Construído com React para interação instantânea.",
+    "feature_security_title": "Pipeline RBAC Rigoroso",
+    "feature_security_desc": "Limites de acesso granulares aplicados via integração JWT segura.",
+    "feature_hosting_title": "Hospedagem Independente",
+    "feature_hosting_desc": "Soberania total de dados. Implante em sua própria infraestrutura.",
+    "pricing_cta": "Revisar Código Aberto Transparente",
+    "start_cta": "Inicializar Implantação",
+    "footer_copyright": "© 2026 Docker Panel Core. Código aberto de nível empresarial."
+  },
+  "auth": {
+    "login_heading": "Autenticar no Painel",
+    "register_heading": "Provisionar Nova Identidade",
+    "email_label": "Endereço de E-mail Administrativo",
+    "email_placeholder": "admin@sua-infraestrutura.com",
+    "password_label": "Senha Segura",
+    "password_placeholder": "••••••••••••",
+    "password_confirm_label": "Confirmar Senha Segura",
+    "submit_login": "Acessar Sistema",
+    "submit_register": "Inicializar Identidade",
+    "error_password_validation": "Política de senha aplicada: Deve ter 8+ caracteres, incluindo um símbolo especial.",
+    "error_password_mismatch": "Falha na autenticação: As senhas não conferem.",
+    "error_email_validation": "Estrutura de e-mail inválida detectada.",
+    "error_auth_failed": "Autenticação rejeitada. Credenciais não correspondem aos registros persistentes."
+  },
+  "dashboard": {
+    "overview_title": "Telemetria e Métricas do Sistema",
+    "active_containers": "Nós de Contêineres Ativos",
+    "trigger_s3_backup": "Início de Snapshot de Dados S3",
+    "view_system_logs": "Inspecionar Logs do Daemon",
+    "restart_container": "Forçar Reinício do Contêiner",
+    "restart_success_msg": "Reinício do contêiner orquestrado com sucesso.",
+    "error_access_denied": "403 Proibido: Você possui camadas de privilégio insuficientes para orquestrar este recurso.",
+    "error_connection": "Falha ao estabelecer conexão de soquete com o daemon do Docker.",
+    "logs_title": "Logs de Execução do Contêiner",
+    "close_action": "Fechar Interface",
+    "state_running": "Em execução",
+    "state_exited": "Encerrado",
+    "backup_success": "Snapshot S3 concluído.",
+    "no_containers": "Nenhum nó ativo detectado."
+  }
+}

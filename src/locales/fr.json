@@ -1,0 +1,47 @@
+{
+  "landing": {
+    "hero_title": "Gérez Docker N'importe Où.",
+    "hero_subtitle": "Le panneau d'orchestration de conteneurs léger, hautement performant et auto-hébergé, conçu pour un contrôle absolu.",
+    "features_heading": "Capacités de Base du Système",
+    "feature_speed_title": "Interface Ultrarapide",
+    "feature_speed_desc": "Construit avec React pour une interaction instantanée.",
+    "feature_security_title": "Pipeline RBAC Strict",
+    "feature_security_desc": "Limites d'accès granulaires imposées via une intégration JWT sécurisée.",
+    "feature_hosting_title": "Hébergement Indépendant",
+    "feature_hosting_desc": "Souveraineté totale des données. Déployez sur votre propre infrastructure.",
+    "pricing_cta": "Examiner l'Open Source Transparent",
+    "start_cta": "Initialiser le Déploiement",
+    "footer_copyright": "© 2026 Docker Panel Core. Open source de qualité professionnelle."
+  },
+  "auth": {
+    "login_heading": "S'authentifier au Panneau",
+    "register_heading": "Fournir une Nouvelle Identité",
+    "email_label": "Adresse E-mail Administrative",
+    "email_placeholder": "admin@votre-infrastructure.com",
+    "password_label": "Mot de Passe Sécurisé",
+    "password_placeholder": "••••••••••••",
+    "password_confirm_label": "Confirmer le Mot de Passe Sécurisé",
+    "submit_login": "Accéder au Système",
+    "submit_register": "Initialiser l'Identité",
+    "error_password_validation": "Politique de mot de passe appliquée : Doit contenir plus de 8 caractères dont un symbole spécial.",
+    "error_password_mismatch": "Échec de l'authentification : Les mots de passe ne correspondent pas.",
+    "error_email_validation": "Structure d'e-mail non valide détectée.",
+    "error_auth_failed": "Authentification refusée. Les informations d'identification ne correspondent pas aux enregistrements persistants."
+  },
+  "dashboard": {
+    "overview_title": "Télémétrie et Métriques du Système",
+    "active_containers": "Nœuds de Conteneurs Actifs",
+    "trigger_s3_backup": "Déclencher le Snapshot de Données S3",
+    "view_system_logs": "Inspecter les Journaux du Démon",
+    "restart_container": "Forcer le Redémarrage du Conteneur",
+    "restart_success_msg": "Redémarrage du conteneur orchestré avec succès.",
+    "error_access_denied": "403 Interdit : Vous possédez des couches de privilèges insuffisantes pour orchestrer cette ressource.",
+    "error_connection": "Échec de l'établissement de la connexion socket avec le démon Docker.",
+    "logs_title": "Journaux d'Exécution du Conteneur",
+    "close_action": "Fermer l'Interface",
+    "state_running": "En cours d'exécution",
+    "state_exited": "Arrêté",
+    "backup_success": "Snapshot S3 terminé.",
+    "no_containers": "Aucun nœud actif détecté."
+  }
+}

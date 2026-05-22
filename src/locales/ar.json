@@ -1,0 +1,47 @@
+{
+  "landing": {
+    "hero_title": "إدارة Docker في أي مكان.",
+    "hero_subtitle": "لوحة تنظيم حاويات ذات استضافة ذاتية عالية الأداء وخفيفة الوزن مصممة للتحكم المطلق.",
+    "features_heading": "قدرات النظام الأساسية",
+    "feature_speed_title": "واجهة سريعة للغاية",
+    "feature_speed_desc": "تم تصميمها باستخدام React للتفاعل الفوري.",
+    "feature_security_title": "مسار RBAC صارم",
+    "feature_security_desc": "حدود وصول دقيقة مفروضة عبر دمج JWT آمن.",
+    "feature_hosting_title": "استضافة مستقلة",
+    "feature_hosting_desc": "سيادة كاملة على البيانات. قم بالنشر على بنيتك التحتية الخاصة.",
+    "pricing_cta": "مراجعة المصدر المفتوح الشفاف",
+    "start_cta": "تهيئة النشر",
+    "footer_copyright": "© 2026 Docker Panel Core. مصدر مفتوح على مستوى المؤسسة."
+  },
+  "auth": {
+    "login_heading": "مصادقة الدخول إلى اللوحة",
+    "register_heading": "توفير هوية جديدة",
+    "email_label": "عنوان البريد الإلكتروني الإداري",
+    "email_placeholder": "admin@your-infrastructure.com",
+    "password_label": "كلمة مرور آمنة",
+    "password_placeholder": "••••••••••••",
+    "password_confirm_label": "تأكيد كلمة المرور الآمنة",
+    "submit_login": "الوصول إلى النظام",
+    "submit_register": "تهيئة الهوية",
+    "error_password_validation": "سياسة كلمة المرور مفروضة: يجب أن تتكون من 8+ أحرف بما في ذلك رمز خاص واحد.",
+    "error_password_mismatch": "فشلت المصادقة: كلمات المرور غير متطابقة.",
+    "error_email_validation": "تم اكتشاف بنية بريد إلكتروني غير صالحة.",
+    "error_auth_failed": "تم رفض المصادقة. أوراق الاعتماد لا تتطابق مع السجلات الدائمة."
+  },
+  "dashboard": {
+    "overview_title": "القياس عن بعد ومقاييس النظام",
+    "active_containers": "عقد الحاويات النشطة",
+    "trigger_s3_backup": "تشغيل لقطة بيانات S3",
+    "view_system_logs": "فحص سجلات البرنامج الخفي",
+    "restart_container": "فرض إعادة تشغيل الحاوية",
+    "restart_success_msg": "تم تنظيم إعادة تشغيل الحاوية بنجاح.",
+    "error_access_denied": "403 محظور: أنت تمتلك طبقات امتياز غير كافية لتنظيم هذا المورد.",
+    "error_connection": "فشل إنشاء اتصال مقبس مع برنامج Docker الخفي.",
+    "logs_title": "سجلات تنفيذ الحاوية",
+    "close_action": "إغلاق الواجهة",
+    "state_running": "قيد التشغيل",
+    "state_exited": "تم الإنهاء",
+    "backup_success": "اكتملت لقطة S3.",
+    "no_containers": "لم يتم اكتشاف عقد نشطة."
+  }
+}

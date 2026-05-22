@@ -1,0 +1,47 @@
+{
+  "landing": {
+    "hero_title": "어디서나 Docker 관리.",
+    "hero_subtitle": "절대적인 제어를 위해 설계된 가볍고 고성능인 자체 호스팅 컨테이너 오케스트레이션 패널.",
+    "features_heading": "핵심 시스템 기능",
+    "feature_speed_title": "초고속 인터페이스",
+    "feature_speed_desc": "즉각적인 상호 작용을 위해 React로 빌드되었습니다.",
+    "feature_security_title": "엄격한 RBAC 파이프라인",
+    "feature_security_desc": "안전한 JWT 통합을 통해 적용되는 세분화된 액세스 제한.",
+    "feature_hosting_title": "독립 호스팅",
+    "feature_hosting_desc": "완전한 데이터 주권. 자체 인프라에 배포하세요.",
+    "pricing_cta": "투명한 오픈 소스 검토하기",
+    "start_cta": "배포 초기화",
+    "footer_copyright": "© 2026 Docker Panel Core. 엔터프라이즈 급 오픈 소스."
+  },
+  "auth": {
+    "login_heading": "패널 인증",
+    "register_heading": "새 ID 프로비저닝",
+    "email_label": "관리자 이메일 주소",
+    "email_placeholder": "admin@your-infrastructure.com",
+    "password_label": "안전한 비밀번호",
+    "password_placeholder": "••••••••••••",
+    "password_confirm_label": "안전한 비밀번호 확인",
+    "submit_login": "시스템 액세스",
+    "submit_register": "ID 초기화",
+    "error_password_validation": "비밀번호 정책 적용됨: 특수 기호를 포함하여 8자 이상이어야 합니다.",
+    "error_password_mismatch": "인증 실패: 비밀번호가 일치하지 않습니다.",
+    "error_email_validation": "오류 이메일 구조가 감지되었습니다.",
+    "error_auth_failed": "인증이 거부되었습니다. 자격 증명이 영구 기록과 일치하지 않습니다."
+  },
+  "dashboard": {
+    "overview_title": "시스템 원격 측정 및 측정 항목",
+    "active_containers": "활성 컨테이너 노드",
+    "trigger_s3_backup": "S3 데이터 스냅샷 트리거",
+    "view_system_logs": "데몬 로그 검사",
+    "restart_container": "컨테이너 강제 다시 시작",
+    "restart_success_msg": "컨테이너 다시 시작이 성공적으로 오케스트레이션되었습니다.",
+    "error_access_denied": "403 Forbidden: 이 리소스를 오케스트레이션할 권한 계층이 부족합니다.",
+    "error_connection": "Docker 데몬과 소켓 연결을 설정하지 못했습니다.",
+    "logs_title": "컨테이너 실행 로그",
+    "close_action": "인터페이스 닫기",
+    "state_running": "실행 중",
+    "state_exited": "종료됨",
+    "backup_success": "S3 스냅샷이 완료되었습니다.",
+    "no_containers": "활성 노드가 감지되지 않았습니다."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "landing": {
+    "hero_title": "Docker'ı Her Yerden Yönetin.",
+    "hero_subtitle": "Mutlak kontrol için tasarlanmış hafif, yüksek performanslı kendi barındırdığınız konteyner orkestrasyon paneli.",
+    "features_heading": "Temel Sistem Yetenekleri",
+    "feature_speed_title": "Işık Hızında Arayüz",
+    "feature_speed_desc": "Anlık etkileşim için React ile oluşturulmuştur.",
+    "feature_security_title": "Sıkı RBAC Hattı",
+    "feature_security_desc": "Güvenli JWT entegrasyonuyla uygulanan ayrıntılı erişim sınırları.",
+    "feature_hosting_title": "Bağımsız Barındırma",
+    "feature_hosting_desc": "Tam veri egemenliği. Kendi altyapınızda dağıtın.",
+    "pricing_cta": "Şeffaf Açık Kaynağı İncele",
+    "start_cta": "Dağıtımı Başlat",
+    "footer_copyright": "© 2026 Docker Panel Core. Kurumsal düzeyde açık kaynak."
+  },
+  "auth": {
+    "login_heading": "Panele Kimlik Doğrula",
+    "register_heading": "Yeni Kimlik Sağla",
+    "email_label": "Yönetimsel E-posta Adresi",
+    "email_placeholder": "admin@your-infrastructure.com",
+    "password_label": "Güvenli Şifre",
+    "password_placeholder": "••••••••••••",
+    "password_confirm_label": "Güvenli Şifreyi Onayla",
+    "submit_login": "Sisteme Eriş",
+    "submit_register": "Kimliği Başlat",
+    "error_password_validation": "Şifre politikası zorunlu: Özel bir sembol içeren en az 8 karakter olmalıdır.",
+    "error_password_mismatch": "Kimlik doğrulama başarısız: Şifreler eşleşmiyor.",
+    "error_email_validation": "Geçersiz e-posta yapısı tespit edildi.",
+    "error_auth_failed": "Kimlik doğrulama reddedildi. Kimlik bilgileri kalıcı kayıtlarla eşleşmiyor."
+  },
+  "dashboard": {
+    "overview_title": "Sistem Telemetrisi ve Metrikler",
+    "active_containers": "Aktif Konteyner Düğümleri",
+    "trigger_s3_backup": "S3 Veri Snapshot'ı Tetikle",
+    "view_system_logs": "Daemon Loglarını İncele",
+    "restart_container": "Konteyneri Yeniden Başlatmaya Zorla",
+    "restart_success_msg": "Konteyner yeniden başlatması başarıyla koordine edildi.",
+    "error_access_denied": "403 Yasak: Bu kaynağı yönetmek için yetersiz ayrıcalık katmanlarına sahipsiniz.",
+    "error_connection": "Docker daemon ile soket bağlantısı kurulamadı.",
+    "logs_title": "Konteyner Çalıştırma Logları",
+    "close_action": "Arayüzü Kapat",
+    "state_running": "Çalışıyor",
+    "state_exited": "Durduruldu",
+    "backup_success": "S3 Snapshot tamamlandı.",
+    "no_containers": "Aktif düğüm tespit edilmedi."
+  }
+}

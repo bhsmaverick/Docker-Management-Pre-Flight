@@ -1,0 +1,47 @@
+{
+  "landing": {
+    "hero_title": "Docker को कहीं भी प्रबंधित करें।",
+    "hero_subtitle": "पूर्ण नियंत्रण के लिए डिज़ाइन किया गया हल्का, उच्च-प्रदर्शन वाला स्व-होस्टेड कंटेनर ऑर्केस्ट्रेशन पैनल।",
+    "features_heading": "मुख्य सिस्टम क्षमताएं",
+    "feature_speed_title": "अल्ट्रासोनिक इंटरफ़ेस",
+    "feature_speed_desc": "त्वरित बातचीत के लिए React के साथ निर्मित।",
+    "feature_security_title": "सख्त RBAC पाइपलाइन",
+    "feature_security_desc": "सुरक्षित JWT एकीकरण के माध्यम से लागू विस्तृत पहुँच सीमाएँ।",
+    "feature_hosting_title": "स्वतंत्र होस्टिंग",
+    "feature_hosting_desc": "संपूर्ण डेटा संप्रभुता। अपने स्वयं के बुनियादी ढांचे परिनियोजित करें।",
+    "pricing_cta": "पारदर्शी ओपन सोर्स की समीक्षा करें",
+    "start_cta": "परिनियोजन आरंभ करें",
+    "footer_copyright": "© 2026 Docker Panel Core. एंटरप्राइज-ग्रेड ओपन सोर्स।"
+  },
+  "auth": {
+    "login_heading": "पैनल को प्रमाणित करें",
+    "register_heading": "नई पहचान प्रदान करें",
+    "email_label": "प्रशासनिक ईमेल पता",
+    "email_placeholder": "admin@your-infrastructure.com",
+    "password_label": "सुरक्षित पासवर्ड",
+    "password_placeholder": "••••••••••••",
+    "password_confirm_label": "सुरक्षित पासवर्ड की पुष्टि करें",
+    "submit_login": "सिस्टम एक्सेस",
+    "submit_register": "पहचान आरंभ करें",
+    "error_password_validation": "पासवर्ड नीति लागू: एक विशेष प्रतीक सहित 8+ अक्षर होने चाहिए।",
+    "error_password_mismatch": "प्रमाणीकरण विफल: पासवर्ड मेल नहीं खाते।",
+    "error_email_validation": "अमान्य ईमेल संरचना पाई गई।",
+    "error_auth_failed": "प्रमाणीकरण अस्वीकृत। क्रेडेंशियल स्थायी रिकॉर्ड से मेल नहीं खाते।"
+  },
+  "dashboard": {
+    "overview_title": "सिस्टम टेलीमेट्री और मेट्रिक्स",
+    "active_containers": "सक्रिय कंटेनर नोड्स",
+    "trigger_s3_backup": "S3 डेटा स्नैपशॉट ट्रिगर करें",
+    "view_system_logs": "डेमॉन लॉग का निरीक्षण करें",
+    "restart_container": "कंटेनर को जबरन पुनरारंभ करें",
+    "restart_success_msg": "कंटेनर पुनरारंभ सफलतापूर्वक कोरियोग्राफ किया गया।",
+    "error_access_denied": "403 निषिद्ध: आपके पास इस संसाधन को व्यवस्थित करने के लिए अपर्याप्त विशेषाधिकार परतें हैं।",
+    "error_connection": "डॉकर डेमॉन के साथ सॉकेट कनेक्शन स्थापित करने में विफल।",
+    "logs_title": "कंटेनर निष्पादन लॉग",
+    "close_action": "इंटरफ़ेस बंद करें",
+    "state_running": "चल रहा है",
+    "state_exited": "बाहर निकल गया",
+    "backup_success": "S3 स्नैपशॉट पूरा हुआ।",
+    "no_containers": "कोई सक्रिय नोड नहीं पाया गया।"
+  }
+}

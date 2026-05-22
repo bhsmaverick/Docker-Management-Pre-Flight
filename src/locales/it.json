@@ -1,0 +1,47 @@
+{
+  "landing": {
+    "hero_title": "Gestisci Docker Ovunque.",
+    "hero_subtitle": "Il pannello di orchestrazione contenitori self-hosted leggero e ad alte prestazioni progettato per il controllo assoluto.",
+    "features_heading": "Capacità Principali del Sistema",
+    "feature_speed_title": "Interfaccia Ultrasonica",
+    "feature_speed_desc": "Costruito con React per un'interazione istantanea.",
+    "feature_security_title": "Pipeline RBAC Rigorosa",
+    "feature_security_desc": "Limiti di accesso granulari applicati tramite integrazione JWT sicura.",
+    "feature_hosting_title": "Hosting Indipendente",
+    "feature_hosting_desc": "Piena sovranità dei dati. Distribuisci sulla tua infrastruttura.",
+    "pricing_cta": "Esamina l'Open Source Trasparente",
+    "start_cta": "Inizializza Distribuzione",
+    "footer_copyright": "© 2026 Docker Panel Core. Open source di livello enterprise."
+  },
+  "auth": {
+    "login_heading": "Autenticazione al Pannello",
+    "register_heading": "Fornisci Nuova Identità",
+    "email_label": "Indirizzo Email Amministrativo",
+    "email_placeholder": "admin@la-tua-infrastruttura.com",
+    "password_label": "Password Sicura",
+    "password_placeholder": "••••••••••••",
+    "password_confirm_label": "Conferma Password Sicura",
+    "submit_login": "Accedi al Sistema",
+    "submit_register": "Inizializza Identità",
+    "error_password_validation": "Criterio password applicato: Deve contenere più di 8 caratteri incluso un simbolo speciale.",
+    "error_password_mismatch": "Autenticazione fallita: Le password non corrispondono.",
+    "error_email_validation": "Struttura email non valida rilevata.",
+    "error_auth_failed": "Autenticazione rifiutata. Le credenziali non corrispondono ai record persistenti."
+  },
+  "dashboard": {
+    "overview_title": "Telemetria e Metriche di Sistema",
+    "active_containers": "Nodi Contenitore Attivi",
+    "trigger_s3_backup": "Avvia Snapshot Dati S3",
+    "view_system_logs": "Ispeziona Log del Demone",
+    "restart_container": "Forza Riavvio Contenitore",
+    "restart_success_msg": "Riavvio del contenitore orchestrato con successo.",
+    "error_access_denied": "403 Vietato: Possiedi livelli di privilegi insufficienti per orchestrare questa risorsa.",
+    "error_connection": "Impossibile stabilire una connessione socket con il demone Docker.",
+    "logs_title": "Log di Esecuzione del Contenitore",
+    "close_action": "Chiudi Interfaccia",
+    "state_running": "In esecuzione",
+    "state_exited": "Arrestato",
+    "backup_success": "Snapshot S3 completato.",
+    "no_containers": "Nessun nodo attivo rilevato."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "landing": {
+    "hero_title": "Gestiona Docker en Cualquier Lugar.",
+    "hero_subtitle": "El panel de control ligero y de alto rendimiento alojado por ti mismo, diseñado para un control absoluto.",
+    "features_heading": "Capacidades de Sistema Centrales",
+    "feature_speed_title": "Interfaz Ultrasónica",
+    "feature_speed_desc": "Construido con React para una interacción instantánea.",
+    "feature_security_title": "Pipeline RBAC Estricto",
+    "feature_security_desc": "Límites de acceso granulares aplicados mediante integración JWT segura.",
+    "feature_hosting_title": "Alojamiento Independiente",
+    "feature_hosting_desc": "Soberanía total de datos. Despliégalo en tu propia infraestructura.",
+    "pricing_cta": "Revisar Código Abierto Transparente",
+    "start_cta": "Inicializar Despliegue",
+    "footer_copyright": "© 2026 Docker Panel Core. Código abierto de grado empresarial."
+  },
+  "auth": {
+    "login_heading": "Autenticarse en el Panel",
+    "register_heading": "Proveer Nueva Identidad",
+    "email_label": "Dirección de Correo Administrativa",
+    "email_placeholder": "admin@tu-infraestructura.com",
+    "password_label": "Contraseña Segura",
+    "password_placeholder": "••••••••••••",
+    "password_confirm_label": "Confirmar Contraseña Segura",
+    "submit_login": "Acceder al Sistema",
+    "submit_register": "Inicializar Identidad",
+    "error_password_validation": "Política de contraseñas aplicada: Debe tener más de 8 caracteres incluyendo un símbolo especializado.",
+    "error_password_mismatch": "Autenticación fallida: Las contraseñas no coinciden.",
+    "error_email_validation": "Se detectó una estructura de correo inválida.",
+    "error_auth_failed": "Autenticación rechazada. Las credenciales no coinciden con los registros persistentes."
+  },
+  "dashboard": {
+    "overview_title": "Telemetría y Métricas del Sistema",
+    "active_containers": "Nodos Contenedores Activos",
+    "trigger_s3_backup": "Activar Snapshot de Datos S3",
+    "view_system_logs": "Inspeccionar Registros de Daemon",
+    "restart_container": "Forzar Reinicio de Contenedor",
+    "restart_success_msg": "Reinicio de contenedor orquestado con éxito.",
+    "error_access_denied": "403 Prohibido: Posees capas de privilegios insuficientes para orquestar este recurso.",
+    "error_connection": "Error al establecer conexión de socket con el daemon de Docker.",
+    "logs_title": "Registros de Ejecución de Contenedor",
+    "close_action": "Cerrar Interfaz",
+    "state_running": "En ejecución",
+    "state_exited": "Detenido",
+    "backup_success": "Snapshot S3 completado.",
+    "no_containers": "No se detectaron nodos activos."
+  }
+}

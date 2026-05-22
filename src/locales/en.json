@@ -1,0 +1,47 @@
+{
+  "landing": {
+    "hero_title": "Manage Docker Anywhere.",
+    "hero_subtitle": "The lightweight, highly performant self-hosted container orchestration panel engineered for absolute control.",
+    "features_heading": "Core System Capabilities",
+    "feature_speed_title": "Lightning Fast Interface",
+    "feature_speed_desc": "Built with Vue 3 Composition API for instantaneous interaction.",
+    "feature_security_title": "Strict RBAC Pipeline",
+    "feature_security_desc": "Granular access limits enforced via secure JWT integration.",
+    "feature_hosting_title": "Independent Hosting",
+    "feature_hosting_desc": "Complete data sovereignty. Deploy on your own infrastructure.",
+    "pricing_cta": "Review Transparent Open Source",
+    "start_cta": "Initialize Deployment",
+    "footer_copyright": "© 2026 Docker Panel Core. Enterprise-grade open source."
+  },
+  "auth": {
+    "login_heading": "Authenticate to Panel",
+    "register_heading": "Provision New Identity",
+    "email_label": "Administrative Email Address",
+    "email_placeholder": "admin@your-infrastructure.com",
+    "password_label": "Secure Password",
+    "password_placeholder": "••••••••••••",
+    "password_confirm_label": "Confirm Secure Password",
+    "submit_login": "Access System",
+    "submit_register": "Initialize Identity",
+    "error_password_validation": "Password policy enforced: Must be 8+ characters including one specialized symbol.",
+    "error_password_mismatch": "Authentication failed: Passwords do not match.",
+    "error_email_validation": "Invalid email structure detected.",
+    "error_auth_failed": "Authentication rejected. Credentials do not match persistent records."
+  },
+  "dashboard": {
+    "overview_title": "System Telemetry & Metrics",
+    "active_containers": "Active Container Nodes",
+    "trigger_s3_backup": "Trigger S3 Data Snapshot",
+    "view_system_logs": "Inspect Daemon Logs",
+    "restart_container": "Force Container Restart",
+    "restart_success_msg": "Container restart orchestrated successfully.",
+    "error_access_denied": "403 Forbidden: You possess insufficient privilege layers to orchestrate this resource.",
+    "error_connection": "Failed to establish socket connection with Docker daemon.",
+    "logs_title": "Container Execution Logs",
+    "close_action": "Close Interface",
+    "state_running": "Running",
+    "state_exited": "Exited",
+    "backup_success": "S3 Snapshot completed.",
+    "no_containers": "No active nodes detected."
+  }
+}
