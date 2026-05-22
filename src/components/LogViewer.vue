@@ -55,7 +55,7 @@ const fetchLogs = async () => {
   logs.value = '';
   try {
     const res = await apiClient.get(`/system/containers/${props.containerId}/logs`);
-    logs.value = res.data.logs || '';
+    logs.value = (typeof res.data === 'string' ? res.data : res.data.logs) || '';
   } catch (err) {
     logs.value = err.response?.data?.error || t('dashboard.error_connection');
   } finally {

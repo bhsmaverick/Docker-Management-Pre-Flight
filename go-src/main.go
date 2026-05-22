@@ -110,7 +110,7 @@ func main() {
 			return c.Status(fiber.StatusServiceUnavailable).JSON(fiber.Map{"error": "Docker service unavailable"})
 		}
 		
-		logs, err := dockerSvc.ContainerLogs(c.Context(), c.Params("container_id"))
+		logsReader, err := dockerSvc.ContainerLogs(c.Context(), c.Params("container_id"))
 		if err != nil {
 			if appErr, ok := err.(*system.AppError); ok {
 				return c.Status(appErr.StatusCode).JSON(appErr)
@@ -118,7 +118,8 @@ func main() {
 			return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{"error": err.Error()})
 		}
 		
-		return c.JSON(fiber.Map{"logs": logs})
+		c.Set("Content-Type", "application/octet-stream")
+		return c.SendStream(logsReader)
 	})
 	
 	adminGroup.Post("/containers/:container_id/restart", func(c *fiber.Ctx) error {

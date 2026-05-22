@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"io"
+	"log"
 	"os"
 	"strings"
 
@@ -64,6 +65,14 @@ func NewDockerService() (*DockerService, error) {
 	if err != nil {
 		return nil, handleDockerError(err)
 	}
+	
+	// Add health check
+	_, err = cli.Ping(context.Background())
+	if err != nil {
+		log.Printf("ERROR: Docker Daemon is unreachable. Ensure the socket is mounted at /var/run/docker.sock and permissions are correct.")
+		// We still return the service; subsequent calls will use checkDockerSocket
+	}
+	
 	return &DockerService{cli: cli}, nil
 }
 
@@ -100,9 +109,9 @@ func (s *DockerService) ListContainers(ctx context.Context) ([]container.Summary
 }
 
 // ContainerLogs streams the tail output from the specified container daemon
-func (s *DockerService) ContainerLogs(ctx context.Context, containerID string) (string, error) {
+func (s *DockerService) ContainerLogs(ctx context.Context, containerID string) (io.ReadCloser, error) {
 	if err := checkDockerSocket(); err != nil {
-		return "", err
+		return nil, err
 	}
 	reader, err := s.cli.ContainerLogs(ctx, containerID, container.LogsOptions{
 		ShowStdout: true,
@@ -110,18 +119,10 @@ func (s *DockerService) ContainerLogs(ctx context.Context, containerID string) (
 		Tail:       "100",
 	})
 	if err != nil {
-		return "", handleDockerError(err)
+		return nil, handleDockerError(err)
 	}
-	defer reader.Close()
 
-	out, err := io.ReadAll(reader)
-	if err != nil {
-		return "", handleDockerError(err)
-	}
-	
-	// Note: API returns multiplexed streams with an 8-byte header per frame for TTY=false.
-	// For production UI parsing, you would typically demultiplex this using stdcopy.StdCopy.
-	return string(out), nil
+	return reader, nil
 }
 
 // RestartContainer forces a teardown and reconstruction of the targeted instance
