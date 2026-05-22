@@ -33,6 +33,9 @@ func (h *WebhookHandler) RestartContainer(c *fiber.Ctx) error {
 
 	// Hand off operational execution to the Docker interface
 	if err := h.DockerService.RestartContainer(c.Context(), containerID); err != nil {
+		if appErr, ok := err.(*AppError); ok {
+			return c.Status(appErr.StatusCode).JSON(appErr)
+		}
 		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
 			"error":   "Failed to orchestrate container restart",
 			"details": err.Error(),

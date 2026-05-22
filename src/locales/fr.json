@@ -11,7 +11,30 @@
     "feature_hosting_desc": "Souveraineté totale des données. Déployez sur votre propre infrastructure.",
     "pricing_cta": "Examiner l'Open Source Transparent",
     "start_cta": "Initialiser le Déploiement",
-    "footer_copyright": "© 2026 Docker Panel Core. Open source de qualité professionnelle."
+    "footer_copyright": "© 2026 Docker Panel Core. Open source de qualité professionnelle.",
+    "section_security_title": "La sécurité avant tout",
+    "section_security_desc": "Contrôlez l'accès aux conteneurs sans exposer les identifiants root. Le contrôle d'accès granulaire basé sur les rôles (RBAC) garantit que les utilisateurs ne voient que ce dont ils ont besoin, minimisant le rayon d'impact et sécurisant votre infrastructure.",
+    "section_workflows_title": "Automatisez les flux de travail",
+    "section_workflows_desc": "Déployez plus rapidement avec des Webhooks intégrés, s'intégrant sans effort à vos pipelines CI/CD existants (GitHub Actions, GitLab CI) pour un déploiement continu rapide.",
+    "section_disaster_title": "Reprise après sinistre",
+    "section_disaster_desc": "Déclenchez des sauvegardes automatisées instantanées directement sur S3, garantissant l'absence de perte de données sur l'ensemble de votre flotte de conteneurs. Restaurez l'état facilement.",
+    "section_testimonials_title": "Approuvé par les ingénieurs DevOps",
+    "testimonial_1_quote": "\"Il nous donne enfin la visibilité dont nous avions besoin sans la lourdeur de Portainer. Le modèle RBAC est parfait.\"",
+    "testimonial_1_author": "— Senior SRE, FinTech Corp",
+    "testimonial_2_quote": "\"Nous avons remplacé notre outil de cluster massif par ce panneau léger. Les sauvegardes S3 nous ont déjà sauvés deux fois.\"",
+    "testimonial_2_author": "— Lead Developer, SaaS Startup",
+    "section_compare_title": "Pourquoi nous choisir plutôt que des alternatives lourdes ?",
+    "compare_us": "Notre Panel (Léger et concentré)",
+    "compare_us_desc": "Démarre en moins de 5 ms, consomme <20 Mo de RAM, interface intuitive sans menus complexes interminables.",
+    "compare_them": "Portainer (et d'autres)",
+    "compare_them_desc": "Empreinte de ressources lourde, configurations écrasantes, nécessite une formation approfondie pour fonctionner en toute sécurité.",
+    "how_it_works_title": "Flux de l'architecture du système",
+    "step_1_title": "1. Requête (Vue UI)",
+    "step_1_desc": "Le client léger initie une requête HTTPS sécurisée contenant la charge utile de l'action et le jeton d'authentification JWT.",
+    "step_2_title": "2. Authentification et vérification (Go API)",
+    "step_2_desc": "Notre backend Go haute performance intercepte la requête, en validant strictement le jeton et les rôles RBAC avant tout traitement.",
+    "step_3_title": "3. Exécution (Docker Socket)",
+    "step_3_desc": "Une fois l'autorisation réussie, le backend communique directement avec le socket du démon Docker local pour exécuter l'opération sur le conteneur."
   },
   "auth": {
     "login_heading": "S'authentifier au Panneau",
@@ -43,5 +66,17 @@
     "state_exited": "Arrêté",
     "backup_success": "Snapshot S3 terminé.",
     "no_containers": "Aucun nœud actif détecté."
+  },
+  "docs": {
+    "title": "Documentation",
+    "intro": "Apprenez à déployer, configurer et sécuriser votre instance Docker Panel Core.",
+    "getting_started_title": "Pour commencer",
+    "getting_started_content": "Déployez le panneau sur une machine Linux avec Docker installé. L'utilisateur doit faire partie du groupe 'docker' pour éviter les erreurs de permission du socket.",
+    "installation_title": "Installation",
+    "installation_step1": "1. Clonez le dépôt.",
+    "installation_step2": "2. Configurez votre .env avec JWT_SECRET et DB_DSN (optionnel).",
+    "installation_step3": "3. Lancez l'application avec des commandes standards ou votre gestionnaire de processus favori.",
+    "usage_title": "Utilisation",
+    "usage_content": "Une fois déployé, naviguez vers l'URL dans votre navigateur. Connectez-vous. Vous pouvez visualiser les conteneurs, lire leurs journaux et orchestrer des redémarrages."
   }
 }

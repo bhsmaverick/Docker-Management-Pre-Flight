@@ -11,7 +11,30 @@
     "feature_hosting_desc": "Pełna suwerenność danych. Wdróż we własnej infrastrukturze.",
     "pricing_cta": "Przeglądaj Przejrzysty Open Source",
     "start_cta": "Zainicjuj Wdrożenie",
-    "footer_copyright": "© 2026 Docker Panel Core. Sieć typu enterprise, open source."
+    "footer_copyright": "© 2026 Docker Panel Core. Sieć typu enterprise, open source.",
+    "section_security_title": "Bezpieczeństwo przede wszystkim",
+    "section_security_desc": "Kontroluj dostęp do kontenerów bez ujawniania poświadczeń root. Granularna kontrola dostępu oparta na rolach (RBAC) gwarantuje, że użytkownicy widzą tylko to, czego potrzebują, minimalizując zagrożenia i utrzymując infrastrukturę w bezpieczeństwie.",
+    "section_workflows_title": "Automatyzuj przepływy pracy",
+    "section_workflows_desc": "Szybciej wdrażaj dzięki osadzonym punktom końcowym Webhook, łatwo integrując się z istniejącymi potokami CI/CD (GitHub Actions, GitLab CI).",
+    "section_disaster_title": "Odzyskiwanie po awarii",
+    "section_disaster_desc": "Uruchamiaj natychmiastowe zautomatyzowane kopie zapasowe bezpośrednio do S3, zapewniając brak utraty danych w Twojej flocie kontenerów.",
+    "section_testimonials_title": "Zaufali nam inżynierowie DevOps",
+    "testimonial_1_quote": "\"Wreszcie daje nam widoczność, której potrzebowaliśmy bez obciążenia Portainera. Model RBAC jest nieskazitelny.\"",
+    "testimonial_1_author": "— Senior SRE, FinTech Corp",
+    "testimonial_2_quote": "\"Zastąpiliśmy nasze ogromne narzędzie klastrowe tym lekkim panelem. Kopie zapasowe S3 uratowały nas już dwa razy.\"",
+    "testimonial_2_author": "— Lead Developer, SaaS Startup",
+    "section_compare_title": "Dlaczego warto wybrać nas zamiast ciężkich alternatyw?",
+    "compare_us": "Nasz panel (lekki i ukierunkowany)",
+    "compare_us_desc": "Uruchamia się w niecałe 5 ms, zużywa <20 MB pamięci RAM, intuicyjny interfejs bez skomplikowanych menu.",
+    "compare_them": "Portainer (i inni)",
+    "compare_them_desc": "Duże zużycie zasobów, przytłaczająca konfiguracja, wymaga obszernego przeszkolenia w celu bezpiecznej obsługi.",
+    "how_it_works_title": "Przepływ pracy w architekturze",
+    "step_1_title": "1. Żądanie (Vue UI)",
+    "step_1_desc": "Lekki klient inicjuje bezpieczne żądanie HTTPS przenoszące ładunek akcji i token JWT.",
+    "step_2_title": "2. Uwierzytelnianie (Go API)",
+    "step_2_desc": "Nasz wydajny backend Go przechwytuje żądanie, rygorystycznie sprawdzając token i role RBAC przed jakimkolwiek przetwarzaniem.",
+    "step_3_title": "3. Wykonanie (Docker Socket)",
+    "step_3_desc": "Po pomyślnej autoryzacji zaplecza komunikuje się bepośrednio z lokalnym gniazdem Docker, aby wykonać akcję na kontenerze."
   },
   "auth": {
     "login_heading": "Uwierzytelnij Się w Panelu",
@@ -43,5 +66,17 @@
     "state_exited": "Zatrzymany",
     "backup_success": "Snapshot S3 zakończony.",
     "no_containers": "Nie wykryto aktywnych węzłów."
+  },
+  "docs": {
+    "title": "Dokumentacja",
+    "intro": "Dowiedz się, jak wdrożyć, skonfigurować i zabezpieczyć instancję Docker Panel Core.",
+    "getting_started_title": "Zaczynamy",
+    "getting_started_content": "Aby rozpocząć, wdrażasz panel na maszynie Linux z Dockerem. Upewnij się, że użytkownik należy do grupy 'docker', aby uniknąć błędów dostępu do gniazda.",
+    "installation_title": "Instalacja",
+    "installation_step1": "1. Sklonuj repozytorium.",
+    "installation_step2": "2. Skonfiguruj plik .env za pomocą JWT_SECRET i DB_DSN (opcjonalnie).",
+    "installation_step3": "3. Uruchom aplikację za pomocą menedżera procesów lub standardowych komend.",
+    "usage_title": "Użycie",
+    "usage_content": "Po wdrożeniu przejdź do przeglądarki pod adres URL. Zaloguj się jako administrator. Możesz sprawdzać wszystkie kontenery, ich dzienniki i uruchamiać je ponownie."
   }
 }

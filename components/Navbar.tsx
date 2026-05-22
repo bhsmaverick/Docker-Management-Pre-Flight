@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useI18n } from './I18nProvider';
 
 export function Navbar() {
-  const { lang, setLang } = useI18n();
+  const { lang, setLang, t } = useI18n();
   const currentPath = usePathname();
 
   const isAuthPage = currentPath === '/login' || currentPath === '/register';
@@ -24,6 +24,11 @@ export function Navbar() {
       </div>
 
       <div className="flex items-center gap-6 text-sm font-medium text-zinc-400">
+        {!isDashboard && (
+          <Link href="/docs" className="hover:text-white transition-colors">
+            {t('docs.title')}
+          </Link>
+        )}
         {!isDashboard && !isAuthPage && (
           <Link href="/login" className="hover:text-white transition-colors">
             Login

@@ -11,7 +11,30 @@
     "feature_hosting_desc": "Kedaulatan data penuh. Terapkan di infrastruktur Anda sendiri.",
     "pricing_cta": "Tinjau Open Source Transparan",
     "start_cta": "Inisialisasi Penerapan",
-    "footer_copyright": "© 2026 Docker Panel Core. Sumber terbuka tingkat perusahaan."
+    "footer_copyright": "© 2026 Docker Panel Core. Sumber terbuka tingkat perusahaan.",
+    "section_security_title": "Keamanan yang Utama",
+    "section_security_desc": "Kontrol akses wadah tanpa mengekspos kredensial root. Role-Based Access Control (RBAC) terperinci memastikan pengguna hanya melihat yang mereka butuhkan, serta menjaga infrastruktur Anda tetap aman.",
+    "section_workflows_title": "Otomatisasi Alur Kerja",
+    "section_workflows_desc": "Terapkan lebih cepat dengan webhook tersemat, terintegrasi dengan mudah ke dalam CI/CD yang ada (GitHub Actions, GitLab CI) untuk penerapan berkelanjutan.",
+    "section_disaster_title": "Pemulihan Bencana",
+    "section_disaster_desc": "Memicu cadangan otomatis instan langsung ke S3, menghindari kehilangan data di seluruh armada kontainer Anda. Pulihkan keadaan dengan lancar.",
+    "section_testimonials_title": "Dipercaya oleh Insinyur DevOps",
+    "testimonial_1_quote": "\"Akhirnya ini memberi kami visibilitas yang kami butuhkan tanpa beban Portainer. Model RBAC-nya sempurna.\"",
+    "testimonial_1_author": "— Senior SRE, FinTech Corp",
+    "testimonial_2_quote": "\"Menggantikan alat cluster besar kami dengan panel ringan ini. Cadangan S3 telah menyelamatkan kami dua kali.\"",
+    "testimonial_2_author": "— Lead Developer, SaaS Startup",
+    "section_compare_title": "Mengapa Memilih Kami dibandingkan Alternatif yang Berat?",
+    "compare_us": "Panel Kami (Ringan & Fokus)",
+    "compare_us_desc": "Mulai dalam waktu kurang dari 5ms, konsumsi RAM <20MB, antarmuka intuitif tanpa menu kompleks yang tiada akhir.",
+    "compare_them": "Portainer (Dan Lainnya)",
+    "compare_them_desc": "Jejak sumber daya berat, konfigurasi yang luar biasa, membutuhkan pelatihan ekstensif untuk beroperasi dengan aman.",
+    "how_it_works_title": "Alur Kerja Arsitektur Sistem",
+    "step_1_title": "1. Permintaan (Vue UI)",
+    "step_1_desc": "Klien ringan memulai permintaan HTTPS aman yang membawa muatan tindakan dan token otentikasi JWT.",
+    "step_2_title": "2. Otentikasi & Verifikasi (Go API)",
+    "step_2_desc": "Backend Go berkinerja tinggi kami mencegat permintaan, memvalidasi token dan peran RBAC secara ketat sebelum pemrosesan apa pun.",
+    "step_3_title": "3. Eksekusi (Docker Socket)",
+    "step_3_desc": "Setelah otorisasi berhasil, backend berkomunikasi langsung dengan soket daemon Docker lokal untuk menjalankan operasi kontainer."
   },
   "auth": {
     "login_heading": "Otentikasi ke Panel",
@@ -43,5 +66,17 @@
     "state_exited": "Keluar",
     "backup_success": "Snapshot S3 selesai.",
     "no_containers": "Tidak ada node aktif yang terdeteksi."
+  },
+  "docs": {
+    "title": "Dokumentasi",
+    "intro": "Pelajari cara menyebarkan, mengonfigurasi, dan mengamankan instance Docker Panel Core Anda.",
+    "getting_started_title": "Memulai",
+    "getting_started_content": "Untuk memulai, pasang panel di mesin Linux dengan Docker terinstal. Pastikan pengguna berada di grup 'docker' untuk menghindari kesalahan izin soket.",
+    "installation_title": "Instalasi",
+    "installation_step1": "1. Kloning repositori.",
+    "installation_step2": "2. Konfigurasi file .env Anda dengan JWT_SECRET dan DB_DSN (opsional).",
+    "installation_step3": "3. Mulai aplikasi menggunakan perintah standar atau manajer proses yang Anda pilih.",
+    "usage_title": "Penggunaan",
+    "usage_content": "Setelah disebarkan, navigasikan ke URL aplikasi di browser Anda. Masuk menggunakan kredensial admin Anda. Anda dapat melihat kontainer dan log."
   }
 }

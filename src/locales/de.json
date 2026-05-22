@@ -11,7 +11,30 @@
     "feature_hosting_desc": "Vollständige Datensouveränität. Bereitstellung auf eigener Infrastruktur.",
     "pricing_cta": "Transparentes Open Source prüfen",
     "start_cta": "Bereitstellung initialisieren",
-    "footer_copyright": "© 2026 Docker Panel Core. Enterprise-Grade Open Source."
+    "footer_copyright": "© 2026 Docker Panel Core. Enterprise-Grade Open Source.",
+    "section_security_title": "Sicherheit zuerst",
+    "section_security_desc": "Kontrollieren Sie den Container-Zugriff, ohne Root-Anmeldeinformationen preiszugeben. Die granulare rollenbasierte Zugriffskontrolle (RBAC) stellt sicher, dass Benutzer nur das sehen, was sie benötigen, minimiert den Explosionsradius und hält Ihre Infrastruktur sicher.",
+    "section_workflows_title": "Workflows automatisieren",
+    "section_workflows_desc": "Schnellere Bereitstellung durch eingebettete Webhook-Endpunkte, die sich mühelos in Ihre bestehenden CI/CD-Pipelines (GitHub Actions, GitLab CI) für eine schnelle kontinuierliche Bereitstellung integrieren lassen.",
+    "section_disaster_title": "Disaster Recovery",
+    "section_disaster_desc": "Lösen Sie sofortige automatisierte Backups direkt auf S3 aus, um einen Datenverlust über Ihre Container-Flotte hinweg zu vermeiden. Stellen Sie den Zustand in Katastrophenszenarien reibungslos wieder her.",
+    "section_testimonials_title": "Von DevOps-Ingenieuren vertraut",
+    "testimonial_1_quote": "\"Es gibt uns endlich die nötige Sichtbarkeit ohne den Ballast von Portainer. Das RBAC-Modell ist fehlerfrei.\"",
+    "testimonial_1_author": "— Senior SRE, FinTech Corp",
+    "testimonial_2_quote": "\"Wir haben unser massives Cluster-Tool durch dieses leichte Panel ersetzt. Die S3-Backups haben uns bereits zweimal gerettet.\"",
+    "testimonial_2_author": "— Lead Developer, SaaS Startup",
+    "section_compare_title": "Warum wir gegenüber schweren Alternativen?",
+    "compare_us": "Unser Panel (Leicht & Fokussiert)",
+    "compare_us_desc": "Startet in unter 5ms, verbraucht <20MB RAM, intuitive Benutzeroberfläche ohne endlose komplexe Menüs.",
+    "compare_them": "Portainer (und andere)",
+    "compare_them_desc": "Schwerer Ressourcenbedarf, überwältigende Konfigurationen, erfordert umfangreiche Schulungen für den sicheren Betrieb.",
+    "how_it_works_title": "Systemarchitektur-Workflow",
+    "step_1_title": "1. Anfrage (Vue UI)",
+    "step_1_desc": "Der leichtgewichtige Client initiiert eine sichere HTTPS-Anfrage mit der Aktions-Nutzlast und dem JWT-Authentifizierungstoken.",
+    "step_2_title": "2. Auth & Verifizierung (Go API)",
+    "step_2_desc": "Unser hochperformantes Go-Backend fängt die Anfrage ab und validiert den Token und die RBAC-Rollen strikt, bevor eine Verarbeitung stattfindet.",
+    "step_3_title": "3. Ausführung (Docker Socket)",
+    "step_3_desc": "Nach erfolgreicher Autorisierung kommuniziert das Backend direkt mit dem lokalen Docker-Daemon-Socket, um die Container-Operation auszuführen."
   },
   "auth": {
     "login_heading": "Am Panel authentifizieren",
@@ -43,5 +66,17 @@
     "state_exited": "Beendet",
     "backup_success": "S3 Snapshot abgeschlossen.",
     "no_containers": "Keine aktiven Knoten erkannt."
+  },
+  "docs": {
+    "title": "Dokumentation",
+    "intro": "Erfahren Sie, wie Sie Ihre Docker Panel Core-Instanz bereitstellen, konfigurieren und sichern.",
+    "getting_started_title": "Erste Schritte",
+    "getting_started_content": "Um zu beginnen, müssen Sie das Panel auf einer Linux-Maschine mit installiertem Docker bereitstellen. Stellen Sie sicher, dass der Benutzer in der 'docker'-Gruppe ist, um Socket-Berechtigungsfehler zu vermeiden.",
+    "installation_title": "Installation",
+    "installation_step1": "1. Klonen Sie das Repository.",
+    "installation_step2": "2. Konfigurieren Sie Ihre .env-Datei mit JWT_SECRET und DB_DSN (optional).",
+    "installation_step3": "3. Starten Sie die Anwendung mit Standardbefehlen oder Ihrem bevorzugten Prozessmanager.",
+    "usage_title": "Verwendung",
+    "usage_content": "Navigieren Sie nach der Bereitstellung zur Anwendungs-URL in Ihrem Browser. Melden Sie sich mit Ihren Administrator-Anmeldeinformationen an. Sie können alle Container anzeigen, deren Protokolle lesen und Neustarts orchestrieren."
   }
 }

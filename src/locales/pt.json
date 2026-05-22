@@ -11,7 +11,30 @@
     "feature_hosting_desc": "Soberania total de dados. Implante em sua própria infraestrutura.",
     "pricing_cta": "Revisar Código Aberto Transparente",
     "start_cta": "Inicializar Implantação",
-    "footer_copyright": "© 2026 Docker Panel Core. Código aberto de nível empresarial."
+    "footer_copyright": "© 2026 Docker Panel Core. Código aberto de nível empresarial.",
+    "section_security_title": "Segurança em primeiro lugar",
+    "section_security_desc": "Controle o acesso a contêineres sem expor credenciais root. O Controle de Acesso Baseado em Função (RBAC) granular garante que os usuários vejam apenas o que precisam, minimizando o impacto e mantendo a infraestrutura segura.",
+    "section_workflows_title": "Automatizar fluxos de trabalho",
+    "section_workflows_desc": "Implante mais rápido com endpoints Webhook incorporados, integrando-se facilmente em seus pipelines CI/CD existentes (GitHub Actions, GitLab CI).",
+    "section_disaster_title": "Recuperação de Desastres",
+    "section_disaster_desc": "Acione backups automáticos instantâneos direto para S3, garantindo perda zero de dados em sua frota de contêineres. Restaure facilmente.",
+    "section_testimonials_title": "Confiado por Engenheiros DevOps",
+    "testimonial_1_quote": "\"Finalmente nos deu a visibilidade que precisávamos sem o inchaço do Portainer. O modelo RBAC é impecável.\"",
+    "testimonial_1_author": "— Senior SRE, FinTech Corp",
+    "testimonial_2_quote": "\"Substituímos nossa enorme ferramenta de cluster por este painel leve. Backups do S3 já nos salvaram duas vezes.\"",
+    "testimonial_2_author": "— Lead Developer, SaaS Startup",
+    "section_compare_title": "Por que nos escolher em vez de alternativas pesadas?",
+    "compare_us": "Nosso Painel (Leve e Focado)",
+    "compare_us_desc": "Inicia em menos de 5ms, consome <20MB RAM, interface intuitiva sem menus longos e complexos.",
+    "compare_them": "Portainer (e outros)",
+    "compare_them_desc": "Consumo pesado de recursos, configurações avassaladoras, requer longo treinamento para operar com segurança.",
+    "how_it_works_title": "Fluxo de Trabalho da Arquitetura C",
+    "step_1_title": "1. Requisição (Vue UI)",
+    "step_1_desc": "O cliente leve inicia uma requisição HTTPS segura transportando o payload da ação e o token de autenticação JWT.",
+    "step_2_title": "2. Autenticação e Verificação (Go API)",
+    "step_2_desc": "Nosso backend Go de alta performance intercepta a requisição, validando estritamente o token e funções RBAC antes do processamento.",
+    "step_3_title": "3. Execução (Docker Socket)",
+    "step_3_desc": "Após autorização, o backend se comunica diretamente com o socket local do Docker local para executar a operação no contêiner."
   },
   "auth": {
     "login_heading": "Autenticar no Painel",
@@ -43,5 +66,17 @@
     "state_exited": "Encerrado",
     "backup_success": "Snapshot S3 concluído.",
     "no_containers": "Nenhum nó ativo detectado."
+  },
+  "docs": {
+    "title": "Documentação",
+    "intro": "Aprenda a implantar, configurar e proteger sua instância do Docker Panel Core.",
+    "getting_started_title": "Começando",
+    "getting_started_content": "Você deve implantar o painel em uma máquina Linux com Docker instalado. Certifique-se de que o usuário pertença ao grupo 'docker' para evitar erros de permissão do socket.",
+    "installation_title": "Instalação",
+    "installation_step1": "1. Clone o repositório.",
+    "installation_step2": "2. Configure seu arquivo .env com JWT_SECRET e DB_DSN (opcional).",
+    "installation_step3": "3. Inicie o aplicativo usando comandos padrão.",
+    "usage_title": "Uso",
+    "usage_content": "Uma vez implantado, navegue até o URL do aplicativo no navegador. Faça o login. Você pode visualizar todos os contêineres, ler logs e reiniciar sem atritos."
   }
 }

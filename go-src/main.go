@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"log"
 
 	"github.com/gofiber/fiber/v2"
@@ -41,7 +42,15 @@ func main() {
 	
 	dockerSvc, err := system.NewDockerService()
 	if err != nil {
-		log.Printf("Warning: Failed to bind Docker daemon socket. Orchestration disabled. %v", err)
+		log.Printf("Error: Cannot access Docker Socket - check permissions/group. Orchestration disabled. Details: %v", err)
+	} else {
+		// Attempt a simple ping to verify socket connectivity
+		_, pingErr := dockerSvc.ListContainers(context.Background())
+		if pingErr != nil {
+			log.Printf("Error: Cannot access Docker Socket - check permissions/group. Initial SDK connect succeeded but ping failed: %v", pingErr)
+		} else {
+			log.Printf("Docker Socket connected")
+		}
 	}
 	webhookHandler := &system.WebhookHandler{DockerService: dockerSvc}
 	backupSvc := &system.BackupService{}
@@ -64,7 +73,55 @@ func main() {
 	adminGroup.Use(auth.RequireRole(auth.RoleAdmin))
 	
 	adminGroup.Post("/backup", backupSvc.TriggerBackup)
-	// Additional docker operations can be placed here
+	
+	// Delegate container listing and logs to the docker service
+	protected.Get("/containers", func(c *fiber.Ctx) error {
+		if dockerSvc == nil {
+			return c.Status(fiber.StatusServiceUnavailable).JSON(fiber.Map{"error": "Docker service unavailable"})
+		}
+		
+		containers, err := dockerSvc.ListContainers(c.Context())
+		if err != nil {
+			if appErr, ok := err.(*system.AppError); ok {
+				return c.Status(appErr.StatusCode).JSON(appErr)
+			}
+			return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{"error": err.Error()})
+		}
+		
+		return c.JSON(fiber.Map{"containers": containers})
+	})
+	
+	protected.Get("/containers/:container_id/logs", func(c *fiber.Ctx) error {
+		if dockerSvc == nil {
+			return c.Status(fiber.StatusServiceUnavailable).JSON(fiber.Map{"error": "Docker service unavailable"})
+		}
+		
+		logs, err := dockerSvc.ContainerLogs(c.Context(), c.Params("container_id"))
+		if err != nil {
+			if appErr, ok := err.(*system.AppError); ok {
+				return c.Status(appErr.StatusCode).JSON(appErr)
+			}
+			return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{"error": err.Error()})
+		}
+		
+		return c.JSON(fiber.Map{"logs": logs})
+	})
+	
+	adminGroup.Post("/containers/:container_id/restart", func(c *fiber.Ctx) error {
+		if dockerSvc == nil {
+			return c.Status(fiber.StatusServiceUnavailable).JSON(fiber.Map{"error": "Docker service unavailable"})
+		}
+		
+		err := dockerSvc.RestartContainer(c.Context(), c.Params("container_id"))
+		if err != nil {
+			if appErr, ok := err.(*system.AppError); ok {
+				return c.Status(appErr.StatusCode).JSON(appErr)
+			}
+			return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{"error": err.Error()})
+		}
+		
+		return c.JSON(fiber.Map{"message": "Container restarted"})
+	})
 
 	// Launch network listener
 	log.Println("Docker Management Panel online. Listening on :8080...")

@@ -11,7 +11,30 @@
     "feature_hosting_desc": "Soberanía total de datos. Despliégalo en tu propia infraestructura.",
     "pricing_cta": "Revisar Código Abierto Transparente",
     "start_cta": "Inicializar Despliegue",
-    "footer_copyright": "© 2026 Docker Panel Core. Código abierto de grado empresarial."
+    "footer_copyright": "© 2026 Docker Panel Core. Código abierto de grado empresarial.",
+    "section_security_title": "Seguridad ante todo",
+    "section_security_desc": "Controle el acceso a los contenedores sin exponer las credenciales de root. El control de acceso basado en roles (RBAC) granular garantiza que los usuarios solo vean lo que necesitan, minimizando el radio de impacto y manteniendo segura su infraestructura.",
+    "section_workflows_title": "Automatice los flujos de trabajo",
+    "section_workflows_desc": "Despliegue más rápido con endpoints de Webhook integrados que se conectan sin esfuerzo a sus pipelines de CI/CD existentes (GitHub Actions, GitLab CI) para una implementación continua rápida.",
+    "section_disaster_title": "Recuperación ante desastres",
+    "section_disaster_desc": "Active copias de seguridad automatizadas instantáneas directamente a S3, asegurando la pérdida cero de datos en su flota de contenedores. Restaure el estado de manera fluida en escenarios de desastre.",
+    "section_testimonials_title": "Con la confianza de ingenieros DevOps",
+    "testimonial_1_quote": "\"Finalmente nos da la visibilidad que necesitábamos sin la sobrecarga de Portainer. El modelo RBAC es impecable.\"",
+    "testimonial_1_author": "— Senior SRE, FinTech Corp",
+    "testimonial_2_quote": "\"Reemplazamos nuestra masiva herramienta de clúster con este panel liviano. Las copias de seguridad de S3 ya nos han salvado dos veces.\"",
+    "testimonial_2_author": "— Lead Developer, SaaS Startup",
+    "section_compare_title": "¿Por qué elegirnos sobre alternativas pesadas?",
+    "compare_us": "Nuestro panel (Liviano y enfocado)",
+    "compare_us_desc": "Se inicia en menos de 5 ms, consume <20 MB de RAM, interfaz intuitiva sin menús complejos interminables.",
+    "compare_them": "Portainer (Y otros)",
+    "compare_them_desc": "Gran huella de recursos, configuraciones abrumadoras, requiere capacitación extensa para operar de forma segura.",
+    "how_it_works_title": "Flujo de trabajo de la arquitectura del sistema",
+    "step_1_title": "1. Solicitud (Vue UI)",
+    "step_1_desc": "El cliente ligero inicia una solicitud HTTPS segura que transporta la carga útil de la acción y el token de autenticación JWT.",
+    "step_2_title": "2. Autenticación y verificación (Go API)",
+    "step_2_desc": "Nuestro backend de Go de alto rendimiento intercepta la solicitud, validando estrictamente el token y los roles RBAC antes de cualquier procesamiento.",
+    "step_3_title": "3. Ejecución (Docker Socket)",
+    "step_3_desc": "Tras la autorización exitosa, el backend se comunica directamente con el socket del demonio de Docker local para ejecutar la operación del contenedor."
   },
   "auth": {
     "login_heading": "Autenticarse en el Panel",
@@ -43,5 +66,17 @@
     "state_exited": "Detenido",
     "backup_success": "Snapshot S3 completado.",
     "no_containers": "No se detectaron nodos activos."
+  },
+  "docs": {
+    "title": "Documentación",
+    "intro": "Aprenda a implementar, configurar y proteger su instancia de Docker Panel Core.",
+    "getting_started_title": "Empezando",
+    "getting_started_content": "Implante el panel en una máquina Linux con Docker instalado. Asegúrese de que el usuario pertenezca al grupo 'docker' para evitar errores de permisos del socket.",
+    "installation_title": "Instalación",
+    "installation_step1": "1. Clone el repositorio.",
+    "installation_step2": "2. Configure el archivo .env con JWT_SECRET y DB_DSN (opcional).",
+    "installation_step3": "3. Inicie la aplicación usando comandos estándar o su gestor de procesos favorito.",
+    "usage_title": "Uso",
+    "usage_content": "Una vez implementado, abra la url en su navegador. Inicie sesión con sus credenciales. Podrá ver contenedores, registros y orquestar reinicios sin fricciones."
   }
 }

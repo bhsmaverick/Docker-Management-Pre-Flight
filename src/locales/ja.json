@@ -11,7 +11,30 @@
     "feature_hosting_desc": "完全なデータ主権。独自のインフラストラクチャにデプロイします。",
     "pricing_cta": "透明なオープンソースを確認する",
     "start_cta": "デプロイメントを初期化",
-    "footer_copyright": "© 2026 Docker Panel Core. エンタープライズグレードのオープンソース。"
+    "footer_copyright": "© 2026 Docker Panel Core. エンタープライズグレードのオープンソース。",
+    "section_security_title": "セキュリティ第一",
+    "section_security_desc": "ルート認証情報を公開せずにコンテナーへのアクセスを制御します。きめ細かな役割ベースのアクセス制御（RBAC）により、ユーザーは必要なものだけを表示でき、インフラストラクチャを安全に保ちます。",
+    "section_workflows_title": "ワークフローの自動化",
+    "section_workflows_desc": "埋め込まれたWebhookエンドポイントを使用してより迅速にデプロイし、既存のCI/CDパイプライン（GitHub Actions、GitLab CI）に統合して継続的デプロイを実現します。",
+    "section_disaster_title": "ディザスタリカバリ",
+    "section_disaster_desc": "S3への即時自動バックアップをトリガーし、コンテナーフリート全体のデータ損失をゼロにします。災害シナリオでの状態をスムーズに復元します。",
+    "section_testimonials_title": "DevOpsエンジニアの信頼",
+    "testimonial_1_quote": "「Portainerのような重さがなく、必要な可視性が得られました。RBACモデルは完璧です。」",
+    "testimonial_1_author": "— シニアSRE, FinTech Corp",
+    "testimonial_2_quote": "「大規模なクラスタツールをこの軽量なパネルで置き換えました。S3のバックアップに2回も助けられました。」",
+    "testimonial_2_author": "— リード開発者, SaaS Startup",
+    "section_compare_title": "重い代替製品ではなく、私たちを選ぶ理由",
+    "compare_us": "私たちのパネル（軽量かつ専用）",
+    "compare_us_desc": "起動は5ミリ秒未満、RAM消費は20MB未満。無限で複雑なメニューのない直感的なインターフェース。",
+    "compare_them": "Portainer（およびその他）",
+    "compare_them_desc": "リソースを大量に消費し、圧倒的な設定が必要で、安全な運用のために大規模なトレーニングを要します。",
+    "how_it_works_title": "システムアーキテクチャのワークフロー",
+    "step_1_title": "1. リクエスト (Vue UI)",
+    "step_1_desc": "軽量なクライアントがアクションのペイロードとJWT認証トークンを運ぶ安全なHTTPSリクエストを開始します。",
+    "step_2_title": "2. 認証と検証 (Go API)",
+    "step_2_desc": "当社の高性能なGoバックエンドがリクエストを傍受し、処理の前にトークンとRBACの役割を厳密に検証します。",
+    "step_3_title": "3. 実行 (Docker Socket)",
+    "step_3_desc": "許可されると、バックエンドはローカルのDockerデーモンソケットと直接通信し、コンテナーの操作を実行します。"
   },
   "auth": {
     "login_heading": "パネルへの認証",
@@ -43,5 +66,17 @@
     "state_exited": "終了",
     "backup_success": "S3スナップショットが完了しました。",
     "no_containers": "アクティブなノードは検出されませんでした。"
+  },
+  "docs": {
+    "title": "ドキュメント",
+    "intro": "Docker Panel Coreインスタンスのデプロイ、構成、保護について学びます。",
+    "getting_started_title": "はじめに",
+    "getting_started_content": "Linuxマシンにデプロイし、Dockerをインストールする必要があります。ソケットのアクセス権エラーを防ぐため、ユーザーが'docker'グループに属していることを確認してください。",
+    "installation_title": "インストール",
+    "installation_step1": "1. リポジトリをクローンします。",
+    "installation_step2": "2. JWT_SECRETとDB_DSN（任意）を使って.envを設定します。",
+    "installation_step3": "3. 標準コマンドまたはプロセス管理ツールを使ってアプリを起動します。",
+    "usage_title": "使用方法",
+    "usage_content": "展開後、ブラウザでアプリURLにアクセスし、管理者資格情報でログインします。コンテナーの表示、ログの読み取り、再起動の操作がスムーズに行えます。"
   }
 }

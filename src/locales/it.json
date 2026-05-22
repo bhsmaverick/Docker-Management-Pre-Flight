@@ -11,7 +11,30 @@
     "feature_hosting_desc": "Piena sovranità dei dati. Distribuisci sulla tua infrastruttura.",
     "pricing_cta": "Esamina l'Open Source Trasparente",
     "start_cta": "Inizializza Distribuzione",
-    "footer_copyright": "© 2026 Docker Panel Core. Open source di livello enterprise."
+    "footer_copyright": "© 2026 Docker Panel Core. Open source di livello enterprise.",
+    "section_security_title": "Sicurezza al primo posto",
+    "section_security_desc": "Controlla l'accesso ai container senza esporre credenziali di root. Il Role-Based Access Control (RBAC) granulare assicura che gli utenti vedano solo ciò di cui hanno bisogno, minimizzando il raggio d'impatto e mantenendo sicura l'infrastruttura.",
+    "section_workflows_title": "Automatizza i flussi di lavoro",
+    "section_workflows_desc": "Distribuisci più velocemente con endpoint Webhook incorporati, integrandosi senza sforzo nelle tue pipeline CI/CD esistenti (GitHub Actions, GitLab CI).",
+    "section_disaster_title": "Disaster Recovery",
+    "section_disaster_desc": "Attiva backup automatici istantanei direttamente su S3, garantendo la perdita zero dei dati su tutta la tua flotta di container. Ripristina lo stato fluidamente.",
+    "section_testimonials_title": "Scelto dagli ingegneri DevOps",
+    "testimonial_1_quote": "\"Ci offre finalmente la visibilità di cui avevamo bisogno senza la pesantezza di Portainer. Il modello RBAC è impeccabile.\"",
+    "testimonial_1_author": "— Senior SRE, FinTech Corp",
+    "testimonial_2_quote": "\"Abbiamo sostituito il nostro enorme strumento per cluster con questo pannello leggero. I backup su S3 ci hanno già salvato due volte.\"",
+    "testimonial_2_author": "— Lead Developer, SaaS Startup",
+    "section_compare_title": "Perché sceglierci rispetto ad alternative pesanti?",
+    "compare_us": "Il Nostro Pannello (Leggero e Focalizzato)",
+    "compare_us_desc": "Si avvia in meno di 5ms, consuma <20MB di RAM, interfaccia intuitiva senza infiniti e complessi menu.",
+    "compare_them": "Portainer (E altri)",
+    "compare_them_desc": "Notevole consumo di risorse, configurazioni travolgenti, richiede una formazione estesa per essere utilizzato in sicurezza.",
+    "how_it_works_title": "Flusso di lavoro dell'architettura di sistema",
+    "step_1_title": "1. Richiesta (Vue UI)",
+    "step_1_desc": "Il client leggero avvia una richiesta HTTPS sicura contenente il payload dell'azione e il token di autenticazione JWT.",
+    "step_2_title": "2. Auth & Verifica (Go API)",
+    "step_2_desc": "Il nostro backend Go ad alte prestazioni intercetta la richiesta, validando rigorosamente il token e i ruoli RBAC prima di qualsiasi elaborazione.",
+    "step_3_title": "3. Esecuzione (Docker Socket)",
+    "step_3_desc": "A seguito di un'autorizzazione andata a buon fine, il backend comunica direttamente con il socket locale del demone Docker per eseguire l'operazione."
   },
   "auth": {
     "login_heading": "Autenticazione al Pannello",
@@ -43,5 +66,17 @@
     "state_exited": "Arrestato",
     "backup_success": "Snapshot S3 completato.",
     "no_containers": "Nessun nodo attivo rilevato."
+  },
+  "docs": {
+    "title": "Documentazione",
+    "intro": "Scopri come distribuire, configurare e proteggere la tua istanza Docker Panel Core.",
+    "getting_started_title": "Iniziare",
+    "getting_started_content": "Per iniziare, distribuisci il pannello su una macchina Linux con Docker installato. Assicurati che l'utente sia nel gruppo 'docker' per evitare errori di permessi.",
+    "installation_title": "Installazione",
+    "installation_step1": "1. Clona il repository.",
+    "installation_step2": "2. Configura il tuo file .env con JWT_SECRET e DB_DSN (opzionale).",
+    "installation_step3": "3. Avvia l'applicazione utilizzando i comandi standard.",
+    "usage_title": "Utilizzo",
+    "usage_content": "Una volta distribuito, vai all'URL nel tuo browser. Accedi con le credenziali di amministratore. Potrai visualizzare container, gestire i log e riavviarli."
   }
 }

@@ -11,7 +11,30 @@
     "feature_hosting_desc": "Tam veri egemenliği. Kendi altyapınızda dağıtın.",
     "pricing_cta": "Şeffaf Açık Kaynağı İncele",
     "start_cta": "Dağıtımı Başlat",
-    "footer_copyright": "© 2026 Docker Panel Core. Kurumsal düzeyde açık kaynak."
+    "footer_copyright": "© 2026 Docker Panel Core. Kurumsal düzeyde açık kaynak.",
+    "section_security_title": "Önce Güvenlik",
+    "section_security_desc": "Root kimlik bilgilerini ifşa etmeden konteyner erişimini kontrol edin. Ayrıntılı Rol Tabanlı Erişim Kontrolü (RBAC), kullanıcıların yalnızca ihtiyaç duyduklarını görmelerini sağlayarak patlama yarıçapını en aza indirir.",
+    "section_workflows_title": "İş akışlarını otomatikleştir",
+    "section_workflows_desc": "Mevcut CI/CD işlem hatlarınıza (GitHub Actions, GitLab CI) zahmetsizce entegre olarak yerleşik Webhook uç noktaları ile daha hızlı dağıtın.",
+    "section_disaster_title": "Felaket Kurtarma",
+    "section_disaster_desc": "Anında otomatik yedeklemeleri doğrudan S3'e tetikleyerek konteyner filonuzda sıfır veri kaybı sağlayın.",
+    "section_testimonials_title": "DevOps Mühendisleri Tarafından Güvenilir",
+    "testimonial_1_quote": "\"Portainer'ın şişkinliği olmadan nihayet ihtiyacımız olan görünürlüğü bize sağlıyor. RBAC modeli kusursuz.\"",
+    "testimonial_1_author": "— Kıdemli SRE, FinTech Corp",
+    "testimonial_2_quote": "\"Devasa küme aracımızı bu hafif panelle değiştirdik. S3 yedeklemeleri bizi şimdiden iki kez kurtardı.\"",
+    "testimonial_2_author": "— Baş Geliştirici, SaaS Startup",
+    "section_compare_title": "Neden bizi ağır alternatiflere tercih etmelisiniz?",
+    "compare_us": "Panelimiz (Hafif ve Odaklanmış)",
+    "compare_us_desc": "5 ms'den kısa sürede başlar, <20 MB RAM tüketir, sonsuz karmaşık menüler olmadan sezgisel bir arayüz.",
+    "compare_them": "Portainer (ve diğerleri)",
+    "compare_them_desc": "Ağır kaynak ayak izleri, karmaşık yapılandırmalar, güvenli bir şekilde çalıştırılması için kapsamlı eğitim gerektirir.",
+    "how_it_works_title": "Sistem Mimari Akışı",
+    "step_1_title": "1. İstek (Vue UI)",
+    "step_1_desc": "Hafif istemci, eylem yükünü ve JWT kimlik doğrulama belirtecini taşıyan güvenli bir HTTPS isteği başlatır.",
+    "step_2_title": "2. Kimlik Doğrulama ve Onaylama (Go API)",
+    "step_2_desc": "Yüksek performanslı Go arka ucumuz isteği engeller, herhangi bir işlemeden önce belirteci ve RBAC rollerini sıkı bir şekilde doğrular.",
+    "step_3_title": "3. Yürütme (Docker Socket)",
+    "step_3_desc": "Başarılı yetkilendirmenin ardından arka uç, konteyner işlemini yürütmek için doğrudan yerel Docker arka plan programı yuvasıyla iletişim kurar."
   },
   "auth": {
     "login_heading": "Panele Kimlik Doğrula",
@@ -43,5 +66,17 @@
     "state_exited": "Durduruldu",
     "backup_success": "S3 Snapshot tamamlandı.",
     "no_containers": "Aktif düğüm tespit edilmedi."
+  },
+  "docs": {
+    "title": "Belgeler",
+    "intro": "Docker Panel Core örneğinizi nasıl dağıtacağınızı, yapılandıracağınızı ve güvence altına alacağınızı öğrenin.",
+    "getting_started_title": "Başlangıç",
+    "getting_started_content": "Docker'ın kurulu olduğu bir Linux makinesinde paneli dağıtmalısınız. Kullanıcının soket izni hatalarını önlemek için 'docker' grubunun bir parçası olduğundan emin olun.",
+    "installation_title": "Kurulum",
+    "installation_step1": "1. Depoyu klonlayın.",
+    "installation_step2": "2. JWT_SECRET ve DB_DSN (isteğe bağlı) ile .env dosyanızı yapılandırın.",
+    "installation_step3": "3. Uygulamayı standart komutlarla veya süreç yöneticinizle başlatın.",
+    "usage_title": "Kullanım",
+    "usage_content": "Dağıtıldıktan sonra tarayıcınızda uygulama URL'sine gidin. Yönetici kimlik bilgilerinizle giriş yapın. Tüm konteynerleri görüntüleyebilir, günlükleri okuyabilir ve sorunsuz yeniden başlatma sağlayabilirsiniz."
   }
 }
