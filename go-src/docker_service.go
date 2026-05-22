@@ -2,7 +2,12 @@ package system
 
 import (
 	"context"
+	"errors"
+	"fmt"
 	"io"
+	"net"
+	"os"
+	"strings"
 
 	"github.com/docker/docker/api/types/container"
 	"github.com/docker/docker/client"
@@ -15,6 +20,27 @@ type DockerService struct {
 
 // NewDockerService provisions the SDK client using local environment descriptors
 func NewDockerService() (*DockerService, error) {
+	socketPath := "/var/run/docker.sock"
+
+	if _, err := os.Stat(socketPath); err != nil {
+		if os.IsNotExist(err) {
+			return nil, errors.New("500 Internal Server Error: Docker socket file /var/run/docker.sock does not exist")
+		}
+		if os.IsPermission(err) || strings.Contains(err.Error(), "permission denied") {
+			return nil, errors.New("500 Internal Server Error: Permission denied to /var/run/docker.sock. You must join the 'docker' group (e.g., 'sudo usermod -aG docker $USER') and restart your session")
+		}
+		return nil, fmt.Errorf("500 Internal Server Error: Failed to stat socket: %v", err)
+	}
+
+	conn, err := net.Dial("unix", socketPath)
+	if err != nil {
+		if os.IsPermission(err) || strings.Contains(err.Error(), "permission denied") {
+			return nil, errors.New("500 Internal Server Error: Permission denied to /var/run/docker.sock. You must join the 'docker' group (e.g., 'sudo usermod -aG docker $USER') and restart your session")
+		}
+		return nil, fmt.Errorf("500 Internal Server Error: Cannot connect to Docker socket: %v", err)
+	}
+	conn.Close()
+
 	cli, err := client.NewClientWithOpts(client.FromEnv, client.WithAPIVersionNegotiation())
 	if err != nil {
 		return nil, err

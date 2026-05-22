@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
@@ -26,6 +27,13 @@ func main() {
 
 	// 2. Initialize application framework
 	app := fiber.New()
+	
+	// Add strict CORS for the frontend origin
+	app.Use(cors.New(cors.Config{
+		AllowOrigins: "http://localhost:5173",
+		AllowHeaders: "Origin, Content-Type, Accept, Authorization",
+	}))
+	
 	app.Use(logger.New())
 
 	// 3. Mount Service Interfaces

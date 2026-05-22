@@ -81,7 +81,7 @@ const triggerBackup = async () => {
     if (err.response?.status === 403) {
       showNotification({ type: 'error', text: t('dashboard.error_access_denied') });
     } else {
-      showNotification({ type: 'error', text: err.response?.data?.error || 'Backup trigger failed' });
+      showNotification({ type: 'error', text: err.response?.data?.error || t('dashboard.error_connection') });
     }
   } finally {
     isBackingUp.value = false;

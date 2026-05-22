@@ -88,7 +88,7 @@ const restartContainer = async (id) => {
     if (err.response?.status === 403) {
       emit('notify', { type: 'error', text: t('dashboard.error_access_denied') });
     } else {
-      emit('notify', { type: 'error', text: err.response?.data?.error || 'Restart failed' });
+      emit('notify', { type: 'error', text: err.response?.data?.error || t('dashboard.error_connection') });
     }
   } finally {
     restartingIds.value = restartingIds.value.filter(containerId => containerId !== id);

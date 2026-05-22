@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { loadLanguageAsync } from '@/src/i18n';
 import en from '@/src/locales/en.json';
 import ua from '@/src/locales/ua.json';
 import es from '@/src/locales/es.json';
@@ -36,7 +37,11 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const storedLang = localStorage.getItem('app_lang');
     if (storedLang && translations[storedLang]) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLangState(storedLang);
+      loadLanguageAsync(storedLang).catch(console.error);
+    } else {
+      loadLanguageAsync('en').catch(console.error);
     }
   }, []);
 
@@ -44,6 +49,7 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
     if (translations[newLang]) {
       setLangState(newLang);
       localStorage.setItem('app_lang', newLang);
+      loadLanguageAsync(newLang).catch(console.error);
     }
   };
 

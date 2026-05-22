@@ -31,7 +31,10 @@
 
 <script setup>
 import { ref, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 import apiClient from '../api/client';
+
+const { t } = useI18n();
 
 const props = defineProps({
   containerId: String,
@@ -54,7 +57,7 @@ const fetchLogs = async () => {
     const res = await apiClient.get(`/system/containers/${props.containerId}/logs`);
     logs.value = res.data.logs || '';
   } catch (err) {
-    logs.value = err.response?.data?.error || 'Failed to fetch daemon logs...';
+    logs.value = err.response?.data?.error || t('dashboard.error_connection');
   } finally {
     isLoading.value = false;
   }
