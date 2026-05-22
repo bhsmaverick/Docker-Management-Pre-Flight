@@ -60,6 +60,16 @@ func main() {
 	api.Post("/register", authHandler.Register)
 	api.Post("/login", authHandler.Login)
 	
+	api.Get("/health", func(c *fiber.Ctx) error {
+		if dockerSvc == nil {
+			return c.Status(fiber.StatusServiceUnavailable).JSON(fiber.Map{"status": "error", "message": "Docker service unavailable"})
+		}
+		if err := dockerSvc.Ping(c.Context()); err != nil {
+			return c.Status(fiber.StatusServiceUnavailable).JSON(fiber.Map{"status": "error", "message": "Docker daemon unreachable"})
+		}
+		return c.Status(fiber.StatusOK).JSON(fiber.Map{"status": "ok", "message": "Docker daemon connected and healthy"})
+	})
+
 	// CI/CD Webhook (Protected by Pre-Shared Secret, not session JWT)
 	api.Post("/webhooks/restart/:container_id", webhookHandler.RestartContainer)
 
@@ -67,6 +77,10 @@ func main() {
 	protected := api.Group("/system")
 	// Enforce valid JWT presence
 	protected.Use(auth.RequireAuth())
+	
+	// Apply RBAC Middleware globally to all protected routes
+	rbacMiddleware := auth.RequireRole(auth.RoleAdmin, auth.RoleViewer)
+	protected.Use(rbacMiddleware)
 
 	// Super-Admin restricted operations
 	adminGroup := protected.Group("/admin")

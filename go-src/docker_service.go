@@ -67,14 +67,43 @@ func NewDockerService() (*DockerService, error) {
 	return &DockerService{cli: cli}, nil
 }
 
+// checkDockerSocket verifies /var/run/docker.sock exists and is readable.
+func checkDockerSocket() error {
+	socketPath := "/var/run/docker.sock"
+	f, err := os.OpenFile(socketPath, os.O_RDWR, 0)
+	if err != nil {
+		return &AppError{
+			StatusCode: 500,
+			Message:    "Docker daemon connection failed. Please ensure the service is running and permissions are set.",
+			Details:    err.Error(),
+		}
+	}
+	f.Close()
+	return nil
+}
+
+// executeWithSocketCheck wraps Docker client interactions
+func (s *DockerService) executeWithSocketCheck(op func() error) error {
+	if err := checkDockerSocket(); err != nil {
+		return err
+	}
+	return handleDockerError(op())
+}
+
 // ListContainers retrieves an array of containers regardless of their execution state
 func (s *DockerService) ListContainers(ctx context.Context) ([]container.Summary, error) {
+	if err := checkDockerSocket(); err != nil {
+		return nil, err
+	}
 	containers, err := s.cli.ContainerList(ctx, container.ListOptions{All: true})
 	return containers, handleDockerError(err)
 }
 
 // ContainerLogs streams the tail output from the specified container daemon
 func (s *DockerService) ContainerLogs(ctx context.Context, containerID string) (string, error) {
+	if err := checkDockerSocket(); err != nil {
+		return "", err
+	}
 	reader, err := s.cli.ContainerLogs(ctx, containerID, container.LogsOptions{
 		ShowStdout: true,
 		ShowStderr: true,
@@ -97,6 +126,18 @@ func (s *DockerService) ContainerLogs(ctx context.Context, containerID string) (
 
 // RestartContainer forces a teardown and reconstruction of the targeted instance
 func (s *DockerService) RestartContainer(ctx context.Context, containerID string) error {
+	if err := checkDockerSocket(); err != nil {
+		return err
+	}
 	timeout := 10 // Proceed with forceful termination if SIGTERM is ignored after 10 seconds
 	return handleDockerError(s.cli.ContainerRestart(ctx, containerID, container.StopOptions{Timeout: &timeout}))
+}
+
+// Ping explicitly checks connectivity to the Docker Daemon for health checks
+func (s *DockerService) Ping(ctx context.Context) error {
+	if err := checkDockerSocket(); err != nil {
+		return err
+	}
+	_, err := s.cli.Ping(ctx)
+	return handleDockerError(err)
 }
